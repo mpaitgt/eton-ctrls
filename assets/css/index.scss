@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  --eton-blue: #29abe2;
+  --white: #ffffff;
+  --black: #383838;
+}
+
+@mixin button($bg, $txt) {
+  background: $bg;
+  border: 1px solid $txt;
+  color: $txt;
+  font-weight: bold;
+  &:hover {
+    background: $txt;
+    color: $bg;
+    border: 1px solid $txt;
+  }
+}
+
+@mixin specialButton() {
+  display: block;
+  font-size: 1em;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 100px;
+  transition: all 0.5s;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 3px 3px 25px -9px rgba(0,0,0,0.75);
+  }
+}
+
+@mixin blueBlock() {
+  background: var(--eton-blue);
+  color: var(--white);
+}
+
+@mixin whiteBlock() {
+  background: var(--white);
+  color: var(--eton-blue);
+}
+
+body {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: var(--black);
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .bg-img::after {
+    background-image: url('http://mrdinc.com/wp-content/uploads/2016/05/production-machining.png');
+    opacity: 0.05;
+    background-position: center;
+    background-attachment: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+  .cstm-nav {
+    position: fixed;
+    background: var(--eton-blue);
+    z-index: 999;
+    padding: 18px;
+    width: 100%;
+    box-shadow: 0px 4px 10px -8px rgba(0,0,0,0.75);
+    a {
+      font-weight: bold;
+      color: var(--white);
+      transition: all 0.25s;
+      &:hover {
+        transform: translateY(-5px);
+        transition: all 0.25s;
+      }
+    }
+  }
+  .section-head {
+    font-size: 3em;
+    color: var(--eton-blue);
+    text-align: left;
+    padding: 20px 100px 10px 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--eton-blue);
+  }
+  .block-text {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--eton-blue);
+    text-align: center;
+    padding: 20px 0px;
+  }
+  .content {
+    padding: 10px 0px 10px 0px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-padding {
+    padding: 50px;
+  }
+  .cstm-btn {
+    @include button(var(--white), var(--eton-blue));
+  }
+  .page {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .thank-you {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--eton-blue);
+    max-width: 600px;
+  }
+}
+
+.home-page {
+  .home-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    h2 {
+      padding: 20px;
+    }
+    #main-btn {
+      @include button(var(--eton-blue), var(--white));
+      @include specialButton();
+    }
+  }
+  .three-column-list {
+    @include blueBlock();
+    .feature-item {
+      .icon {
+        display: flex;
+        justify-content: center;
+      }
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 20px 0px;
+        border-bottom: 3px solid var(--white);
+      }
+      p {
+        padding: 20px 20px 0px 20px;
+      }
+    }
+  }
+
+  .contact-block {
+    background: linear-gradient(180deg, var(--white), #f1f1f1);
+    box-shadow: 0px 0px 12px -8px rgba(0,0,0,0.75);
+    .left-panel {
+      h2 {
+        text-align: left;
+      }
+      p {
+        font-size: 24px;
+      }
+      ul {
+        list-style: square;
+        margin-left: 40px;
+        li {
+          font-size: 1.25em;
+          padding: 10px 0px;
+        }
+      }
+    }
+  }
+}
+
+.about-page {
+  .feature-quote {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.services-page {
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    .grid-item {
+      border-bottom: 2px solid var(--eton-blue);
+      padding: 0px 20px 40px 20px;
+      margin: 0px 24px 24px 24px;
+      .service-item {
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--eton-blue);
+      }
+      h4 {
+        font-weight: bold;
+        padding: 20px 0px;
+      }
+    }
+  }
+}
+
+
+
+
+.text-break {
+  background: var(--eton-blue);
+  color: var(--white);
+  font-size: 52px;
+  font-weight: bold;
+  padding: 20px 50px;
+  margin: 50px 0px;
+}
+
+.field {
+  border: 1px solid var(--black);
+  padding: 10px;
+}
+
+.services {
+  background: var(--eton-blue);
+  h1 {
+    color: var(--white);
+    font-weight: bold;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    list-style: none;
+    padding: 0;
+    color: var(--white);
+    text-align: right;
+    font-size: 1.5em;
+    li {
+      padding: 10px 0px;
+      .check {
+        margin-left: 20px;
+        margin-right: 40px;
+      }
+    }
+  }
+  .services-btn {
+    @include button(var(--white), var(--eton-blue));
+    @include specialButton();
+  }
+}
+
+
+
+
