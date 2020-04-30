@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+body {
+  background: #252525;
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+body section {
+  padding: 100px 100px;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Viga', sans-serif;
+  color: #29abe2;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.616);
+}
+
+body a {
+  text-decoration: none;
+}
+
+body p {
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 100px auto;
+}
+
+body footer img {
+  width: 300px;
+}
+
+body footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f1f1f1;
+}
+
+body footer div li {
+  margin: 10px 0px;
+  color: #a3a3a3;
+  text-align: center;
+}
+
+.main-nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: rgba(41, 170, 226, 0);
+  font-weight: 700;
+  z-index: 999;
+  padding: 20px 0px;
+}
+
+.main-nav img {
+  width: 500px;
+}
+
+.main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 526px) {
+  .main-nav ul {
+    display: none;
+  }
+}
+
+.main-nav ul li {
+  padding: 0px 32px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.main-nav ul li:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.main-nav ul a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.main-nav .burger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  height: 44px;
+  width: 44px;
+}
+
+.main-nav .burger div {
+  display: none;
+  height: 3px;
+  width: 100%;
+  background: #f1f1f1;
+  margin: 10px 0px;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transform: all 0.5s;
+          transform: all 0.5s;
+}
+
+@media screen and (max-width: 526px) {
+  .main-nav .burger div {
+    display: block;
+  }
+}
+
+.main-nav .burger:nth-child(1) {
+  top: 0;
+}
+
+.main-nav .burger:nth-child(2) {
+  top: 16;
+}
+
+.main-nav .burger:nth-child(3) {
+  top: 32;
+}
+
+.section-head {
+  color: #29abe2;
+  letter-spacing: -2px;
+  text-align: left;
+  border-bottom: 2px solid #29abe2;
+  margin: 20px 0px;
+  font-size: 72px;
+}
+
+.page-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  font-size: 120px;
+  border-bottom: none;
+}
+
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.partial-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.block-text {
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

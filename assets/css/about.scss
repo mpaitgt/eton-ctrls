@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+
+section {
+  h2 {
+    margin-bottom: 40px;
+  }
+  .about-break {
+    font-size: 52px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 40px auto;
+  }
+}
