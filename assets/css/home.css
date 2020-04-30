@@ -69,6 +69,8 @@
   width: 100%;
   -webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
           clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
+  -webkit-box-shadow: 12px 12px 0px 0px #f1f1f1;
+          box-shadow: 12px 12px 0px 0px #f1f1f1;
 }
 
 .two-columns .row h3 {

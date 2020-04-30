@@ -38,13 +38,15 @@
     grid-template-columns: 40% 60%;
     grid-gap: 50px;
     position: relative;
-    div {
+    .image-wrap {
       align-self: center;
       justify-self: center;
+      filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
     }
     img {
       width: 100%;
       clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
+      box-shadow: 
     }
     h3 {
       font-size: 52px;
@@ -119,65 +121,5 @@
   }
   .column-two {
     justify-self: center;
-    #contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 25% 25% 25% 25%;
-      grid-gap: 10px;
-      max-width: 500px;
-      label {
-        display: block;
-        font-weight: 900;
-        color: $gray-2;
-      }
-      input, textarea {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding: 12px 20px;
-        border: none;
-        background: transparent;
-        border-bottom: 2px solid $white;
-        border-radius: 2px;
-        width: 100%;
-        color: $gray-3;
-        font-size: 16px;
-        &::placeholder {
-          font-size: 16px;
-          color: $gray-3;
-        }
-      }
-      .name, .phone, .email, .message, #submit-btn {
-        align-self: center;
-      }
-      .name {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-      .phone {
-        grid-column: 2/3;
-        grid-row: 1/2;
-      }
-      .email {
-        grid-column: 1/3;
-        grid-row: 2/3;
-      }
-      .message {
-        grid-row: 3/4;
-        grid-column: 1/3;
-      }
-      #submit-btn {
-        grid-row: 4/5;
-        grid-column: 1/3;
-        height: 50px;
-        border-radius: 2px;
-        border: none;
-        background: $eton-blue;
-        color: inherit;
-        cursor: pointer;
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 20px;
-      }
-    }
   }
 }

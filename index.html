@@ -14,6 +14,7 @@
 
   <!-- Navigation -->
   <nav class="main-nav">
+    <img src="../assets/images/eton-controls-logo-2.png" alt="nav-bar-eton-controls-logo" style="opacity: 0">
     <ul>
       <li class="nav-item">
         <a class="nav-link active" href="./index.html">Home</a>
@@ -44,8 +45,8 @@
   <!-- Two column section -->
   <section class="two-columns partial-width">
     <div class="row">
-      <div>
-        <img src="./assets/images/inventory-preview.jpeg" alt="">
+      <div class="image-wrap">
+        <img src="./assets/images/inventory-preview.jpeg" alt="inventory-feature-image">
       </div>
       <div>
         <h3>Extensive Inventory</h3>
@@ -56,7 +57,7 @@
     </div>
     <div class="row">
       <div>
-        <img src="./assets/images/service-preview.jpeg" alt="">
+        <img src="./assets/images/service-preview.jpeg" alt="service-feature-image">
       </div>
       <div>
         <h3>Unbeatable service</h3>
@@ -67,7 +68,7 @@
     </div>
     <div class="row">
       <div>
-        <img src="./assets/images/expert-preview.jpeg" alt="">
+        <img src="./assets/images/expert-preview.jpeg" alt="expert-feature-image">
       </div>
       <div>
         <h3>Experts in the field</h3>
@@ -131,19 +132,19 @@
       <form id="contact-form">
         <div class="form-group name">
           <label for="name-input name">Name</label>
-          <input type="text" id="name-input" aria-describedby="name" placeholder="Jon Smith">
+          <input type="text" id="name" aria-describedby="name" placeholder="Jon Smith">
         </div>
         <div class="form-group phone">
           <label for="phone-input">Phone</label>
-          <input type="text" id="phone-input" placeholder="123-456-7890">
+          <input type="text" id="phone" placeholder="123-456-7890">
         </div>
         <div class="form-group email">
             <label for="email-input">Email</label>
-            <input type="text" id="email-input" placeholder="example@gmail.com">
+            <input type="text" id="email" placeholder="example@gmail.com">
         </div>
         <div class="form-group message">
           <label for="message-input">Message</label>
-          <input id="message-input" rows="3" placeholder="What can we do for you?"/>
+          <input id="message" rows="3" placeholder="What can we do for you?"/>
         </div>
         <button type="submit" id="submit-btn" class="btn btn-primary cstm-btn">Submit</button>
       </form>
@@ -155,10 +156,18 @@
     <img src="./assets/images/eton-controls-logo-2.png" alt="">
     <div>
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Services</li>
-        <li>Contact</li>
+        <li>
+          <a class="nav-link" href="./directory/home.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="./directory/about.html">About Us</a>
+        </li>
+        <li>
+          <a class="nav-link" href="./directory/services.html">Services</a>
+        </li>
+        <li>
+          <a class="nav-link" href="./directory/contact.html">Contact</a>
+        </li>
       </ul>
     </div>
   </footer>
