@@ -3,7 +3,7 @@
   margin: 0;
   --eton-blue: #29abe2;
   --white: #ffffff;
-  --black: #383838;
+  --black: #272727;
 }
 
 @mixin button($bg, $txt) {
@@ -18,14 +18,17 @@
   }
 }
 
-@mixin specialButton() {
+@mixin specialButton($bg, $text) {
   display: block;
+  background: $bg;
+  color: $text;
   font-size: 1em;
   padding: 1em 2em;
   border: none;
   border-radius: 100px;
   transition: all 0.5s;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     transform: scale(1.1);
     text-decoration: none;
@@ -47,7 +50,8 @@
 body {
   font-size: 18px;
   letter-spacing: -0.5px;
-  color: var(--black);
+  color: var(--white);
+  background: #383838;
   a {
     text-decoration: none;
     color: inherit;
@@ -57,7 +61,7 @@ body {
   }
   .bg-img::after {
     background-image: url('http://mrdinc.com/wp-content/uploads/2016/05/production-machining.png');
-    opacity: 0.05;
+    opacity: 0.04;
     background-position: center;
     background-attachment: fixed;
     content: "";
@@ -72,7 +76,7 @@ body {
     position: fixed;
     background: var(--eton-blue);
     z-index: 999;
-    padding: 18px;
+    padding: 8px 18px;
     width: 100%;
     box-shadow: 0px 4px 10px -8px rgba(0,0,0,0.75);
     a {
@@ -140,6 +144,12 @@ body {
     h2 {
       padding: 20px;
     }
+    #main-logo.stick {
+      width: 100px;
+      position: fixed;
+      top: 0;
+      margin: 60px 0 0 0;
+    }
     #main-btn {
       @include button(var(--eton-blue), var(--white));
       @include specialButton();
@@ -188,6 +198,7 @@ body {
 }
 
 .about-page {
+  background: rgb(37, 37, 37);
   .feature-quote {
     max-width: 600px;
     margin: 0 auto;
@@ -214,9 +225,6 @@ body {
     }
   }
 }
-
-
-
 
 .text-break {
   background: var(--eton-blue);

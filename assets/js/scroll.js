@@ -1,15 +1,21 @@
+window.onload = function() {
+  let
+    opacity = 0,
+    nav = document.querySelector('.main-nav'),
+    bg = `rgb(41, 171, 226, ${opacity})`;
+    
+  nav.style.background = bg;
 
-const header = document.getElementById('header');
-const sticky = header.pageYOffset;
-console.log(sticky);
+  window.addEventListener('scroll', function() {
+    opacity = (window.pageYOffset / 500);
+    bg = `rgb(41, 171, 226, ${opacity})`;
+    nav.style.background = bg;
+    nav.style.zIndex = 999;
 
-console.log(window);
-window.onscroll = function() {scrollFunction()};
-
-const scrollFunction = () => {
-  if (window.pageYOffset > sticky) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
+    if (opacity >= 1) {
+      nav.style.boxShadow = '0px 0px 12px 0px rgba(0, 0, 0, 0.75)';
+    } else if (opacity <= 1) {
+      nav.style.boxShadow = 'none';
+    }
+  })
 }
