@@ -178,7 +178,7 @@ body footer div li {
           justify-content: flex-end;
 }
 
-@media screen and (max-width: 526px) {
+@media screen and (max-width: 768px) {
   .main-nav ul {
     display: none;
   }
@@ -211,11 +211,11 @@ body footer div li {
 }
 
 .main-nav .burger div {
-  display: none;
-  height: 3px;
+  position: absolute;
+  height: 5px;
   width: 100%;
   background: #f1f1f1;
-  margin: 10px 0px;
+  margin: 8px 0px;
   border-radius: 5px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -223,22 +223,52 @@ body footer div li {
           transform: all 0.5s;
 }
 
-@media screen and (max-width: 526px) {
-  .main-nav .burger div {
+.main-nav .burger .line1 {
+  top: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main-nav .burger .line2 {
+  top: 14px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main-nav .burger .line3 {
+  top: 28px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main-nav .burger .topline-x {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main-nav .burger .middleline-x {
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main-nav .burger .bottomline-x {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav .burger {
     display: block;
   }
-}
-
-.main-nav .burger:nth-child(1) {
-  top: 0;
-}
-
-.main-nav .burger:nth-child(2) {
-  top: 16;
-}
-
-.main-nav .burger:nth-child(3) {
-  top: 32;
 }
 
 .section-head {
