@@ -399,7 +399,10 @@ body footer div li {
   0% {
     opacity: 0;
   }
-  50% {
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {
@@ -411,7 +414,10 @@ body footer div li {
   0% {
     opacity: 0;
   }
-  50% {
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {

@@ -1,3 +1,3 @@
 window.onload = function() {
-  window.addEventListener('scroll', fadingNavBar);
+  window.addEventListener('scroll', fadingNavbar);
 }

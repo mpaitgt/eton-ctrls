@@ -1,4 +1,4 @@
-function fadingNavBar() {
+function fadingNavbar() {
   let
     opacity = 0,
     nav = document.querySelector('.main-nav'),
