@@ -6,9 +6,13 @@ section {
     margin-bottom: 40px;
   }
   .about-break {
-    font-size: 52px;
+    // font-size: 52px;
     text-align: left;
     max-width: 1000px;
     margin: 40px auto;
+  }
+  h4 {
+    margin-bottom: 20px;
+    color: $white;
   }
 }

@@ -110,6 +110,25 @@ body h3 {
 
 body h4 {
   font-size: 24px;
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 992px) {
+  body h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body h4 {
+    font-size: 18px;
+  }
 }
 
 body h5 {
@@ -193,6 +212,13 @@ body footer div li {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  body footer div li {
+    font-size: 16px;
+    margin: 20px 0px;
+  }
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,6 +239,12 @@ body footer div li {
   top: 0;
   padding: 5px 20px;
   z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    padding: 5px 5px;
+  }
 }
 
 .main-nav img {
@@ -329,6 +361,24 @@ body footer div li {
   height: 100vh;
   font-size: 120px;
   border-bottom: none;
+}
+
+@media screen and (max-width: 992px) {
+  .page-head {
+    font-size: 102px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-head {
+    font-size: 84px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-head {
+    font-size: 72px;
+  }
 }
 
 .full-width {
