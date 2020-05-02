@@ -46,7 +46,7 @@ body {
     z-index: -1;
   }
   section {
-    padding: 100px 100px;
+    padding: 60px;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Viga', sans-serif;
@@ -56,13 +56,37 @@ body {
     margin: 0 auto;
   }
   h1 {
-    font-size: 42px;
+    font-size: 46px;
+    @include md {
+      font-size: 40px;
+    }
+    @include sm {
+      font-size: 32px;
+    }
   }
   h2 {
-    font-size: 42px;
+    font-size: 38px;
+    @include lg {
+      font-size: 32px;
+    }
+    @include md {
+      font-size: 28px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
   }
   h3 {
     font-size: 32px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 14px;
   }
   a {
     text-decoration: none;
@@ -73,11 +97,14 @@ body {
     }
   }
   p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 28px;
     padding-bottom: 24px;
     max-width: 1000px;
     margin: 0 auto;
+    @include xl {
+      font-size: 16px;
+    }
   }
   ul {
     list-style-type: none;
@@ -111,14 +138,14 @@ body {
   z-index: 999;
   img {
     width: 200px;
-    @include tablet {
-      display: none;
-    }
+    // @include tablet {
+    //   display: none;
+    // }
   }
   .menu-content {
-    @include tablet {
-      transition: all 0.3s;
-    }
+    // @include tablet {
+    //   transition: all 0.3s;
+    // }
   }
   .nav-active {
     transform: translateY(0%);
@@ -192,7 +219,6 @@ body {
   text-align: left;
   border-bottom: 2px solid $eton-blue;
   margin: 20px 0px;
-  font-size: 72px;
 }
 
 .page-head {
@@ -208,8 +234,14 @@ body {
 }
 
 .partial-width {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  @include lg {
+    width: 80%;
+  }
+  @include sm {
+    width: 100%;
+  }
 }
 
 .block-text {

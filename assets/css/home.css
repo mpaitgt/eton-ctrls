@@ -30,6 +30,12 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 992px) {
+  .home-screen img {
+    width: 100%;
+  }
+}
+
 .home-screen h2 {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -49,10 +55,22 @@
 .two-columns .row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
-  grid-gap: 50px;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  grid-gap: 20px;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .two-columns .row {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-gap: 40px;
+    text-align: center;
+  }
 }
 
 .two-columns .row .image-wrap {
@@ -71,13 +89,22 @@
           clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
 }
 
-.two-columns .row h3 {
-  font-size: 52px;
+@media screen and (max-width: 1200px) {
+  .two-columns .row h2 {
+    font-size: 28px;
+  }
 }
 
 .two-columns .row p {
-  font-size: 20px;
   padding-left: 40px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .two-columns .row p {
+    padding-left: 0px;
+  }
 }
 
 .two-columns .column {
@@ -91,11 +118,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.two-columns .column .icon {
-  margin-bottom: 32px;
-  color: #29abe2;
 }
 
 .two-columns .column h2 {
@@ -154,20 +176,6 @@
       grid-template-columns: 1fr 1fr;
   margin-bottom: 50px;
   background: #474747;
-  -webkit-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 0.75);
-          box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 0.75);
-}
-
-@media screen and (max-width: 768px) {
-  .contact {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    grid-gap: 50px;
-  }
-}
-
-.contact .column-one h2 {
-  text-align: left;
 }
 
 .contact .column-one ul {
@@ -186,8 +194,11 @@
 }
 
 .contact .column-one ul li .check {
-  margin-left: 20px;
-  margin-right: 40px;
+  margin-right: 10px;
+}
+
+.contact .column-one ul li span {
+  font-size: 24px;
 }
 
 .contact .column-two {

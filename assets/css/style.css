@@ -55,7 +55,7 @@ body .bg-shape-2 {
 }
 
 body section {
-  padding: 100px 100px;
+  padding: 60px;
 }
 
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -67,15 +67,57 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 body h1 {
-  font-size: 42px;
+  font-size: 46px;
+}
+
+@media screen and (max-width: 768px) {
+  body h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body h1 {
+    font-size: 32px;
+  }
 }
 
 body h2 {
-  font-size: 42px;
+  font-size: 38px;
+}
+
+@media screen and (max-width: 992px) {
+  body h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body h2 {
+    font-size: 24px;
+  }
 }
 
 body h3 {
   font-size: 32px;
+}
+
+body h4 {
+  font-size: 24px;
+}
+
+body h5 {
+  font-size: 18px;
+}
+
+body h6 {
+  font-size: 14px;
 }
 
 body a {
@@ -89,11 +131,17 @@ body a:hover {
 }
 
 body p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
   padding-bottom: 24px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  body p {
+    font-size: 16px;
+  }
 }
 
 body ul {
@@ -169,19 +217,6 @@ body footer div li {
 
 .main-nav img {
   width: 200px;
-}
-
-@media screen and (max-width: 768px) {
-  .main-nav img {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .main-nav .menu-content {
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
 }
 
 .main-nav .nav-active {
@@ -275,7 +310,6 @@ body footer div li {
   text-align: left;
   border-bottom: 2px solid #29abe2;
   margin: 20px 0px;
-  font-size: 72px;
 }
 
 .page-head {
@@ -303,8 +337,20 @@ body footer div li {
 }
 
 .partial-width {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .partial-width {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .partial-width {
+    width: 100%;
+  }
 }
 
 .block-text {
