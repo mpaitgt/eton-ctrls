@@ -20,12 +20,8 @@
   img {
     width: 70%;
     margin: 0 auto;
-    @include tablet {
-      width: 100%;
-    }
   }
   h2 {
-    font-size: 42px;
     margin-top: 50px;
     margin-bottom: 50px;
     color: $white;
@@ -38,7 +34,6 @@
   grid-gap: 40px;
   background: $gray-1;
   color: $white;
-  box-shadow: $section-shadow;
   .row {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -73,7 +68,6 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 32px;
       padding-bottom: 20px;
       width: 100%;
       border-bottom: 2px solid $black;
@@ -104,6 +98,10 @@
   margin-bottom: 50px;
   background: $gray-1;
   box-shadow: $section-shadow;
+  @include tablet {
+    grid-template-columns: 100%;
+    grid-gap: 50px;
+  }
   .column-one {
     h2 {
       text-align: left;
