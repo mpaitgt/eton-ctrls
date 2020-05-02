@@ -1,8 +1,8 @@
 let burger = document.querySelector('.burger');
 
 burger.addEventListener('click', function() {
-  console.log('hello')
   let
+    menu = document.querySelector('.menu-content');
     line1 = document.querySelector('.line1'),
     line2 = document.querySelector('.line2'),
     line3 = document.querySelector('.line3');
@@ -10,4 +10,5 @@ burger.addEventListener('click', function() {
   line1.classList.toggle('topline-x');
   line2.classList.toggle('middleline-x');
   line3.classList.toggle('bottomline-x');
+  menu.classList.toggle('nav-active');
 })
