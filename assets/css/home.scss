@@ -20,6 +20,9 @@
   img {
     width: 70%;
     margin: 0 auto;
+    @include lg {
+      width: 100%;
+    }
   }
   h2 {
     margin-top: 50px;
@@ -36,9 +39,15 @@
   color: $white;
   .row {
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-gap: 50px;
+    grid-template-columns: 45% 55%;
+    grid-gap: 20px;
     position: relative;
+    align-items: center;
+    @include md {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+      text-align: center;
+    }
     .image-wrap {
       align-self: center;
       justify-self: center;
@@ -48,22 +57,24 @@
       width: 100%;
       clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
     }
-    h3 {
-      font-size: 52px;
+    h2 {
+      @include xl {
+        font-size: 28px;
+      }
     }
     p {
-      font-size: 20px;
-      padding-left: 40px;
+      padding-left: 20px;
+      max-width: 420px;
+      margin: 0 auto;
+      @include lg {
+        padding-left: 0px;
+      }
     }
   }
   .column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .icon {
-      margin-bottom: 32px;
-      color: $eton-blue;
-    }
     h2 {
       margin-bottom: 20px;
       text-transform: uppercase;
@@ -94,35 +105,38 @@
 
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60%;
   margin-bottom: 50px;
   background: $gray-1;
-  box-shadow: $section-shadow;
-  @include tablet {
+  align-items: center;
+  justify-items: center;
+  @include lg {
     grid-template-columns: 100%;
     grid-gap: 50px;
   }
   .column-one {
-    h2 {
-      text-align: left;
-    }
+    justify-self: center;
     ul {
       display: grid;
       grid-template-columns: 100%;
       list-style: none;
       padding: 0;
       color: var(--white);
-      font-size: 1.5em;
       li {
         padding: 10px 0px;
         .check {
-          margin-left: 20px;
-          margin-right: 40px;
+          margin-right: 10px;
+          @include lg {
+            font-size: 24px;
+          }
+        }
+        span {
+          font-size: 24px;
+          @include xl {
+            font-size: 20px;
+          }
         }
       }
     }
-  }
-  .column-two {
-    justify-self: center;
   }
 }
