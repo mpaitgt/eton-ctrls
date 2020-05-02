@@ -105,15 +105,17 @@
 
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60%;
   margin-bottom: 50px;
   background: $gray-1;
-  // align-items: center;
-  // justify-items: center;
+  align-items: center;
+  justify-items: center;
+  @include lg {
+    grid-template-columns: 100%;
+    grid-gap: 50px;
+  }
   .column-one {
-    h2 {
-      // text-align: left;
-    }
+    justify-self: center;
     ul {
       display: grid;
       grid-template-columns: 100%;
@@ -125,14 +127,17 @@
         padding: 10px 0px;
         .check {
           margin-right: 10px;
+          @include lg {
+            font-size: 24px;
+          }
         }
         span {
           font-size: 24px;
+          @include xl {
+            font-size: 20px;
+          }
         }
       }
     }
-  }
-  .column-two {
-    justify-self: center;
   }
 }

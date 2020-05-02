@@ -172,10 +172,27 @@
 .contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
   margin-bottom: 50px;
   background: #474747;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .contact {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-gap: 50px;
+  }
+}
+
+.contact .column-one {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .contact .column-one ul {
@@ -197,12 +214,19 @@
   margin-right: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .contact .column-one ul li .check {
+    font-size: 24px;
+  }
+}
+
 .contact .column-one ul li span {
   font-size: 24px;
 }
 
-.contact .column-two {
-  -ms-grid-column-align: center;
-      justify-self: center;
+@media screen and (max-width: 1200px) {
+  .contact .column-one ul li span {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=home.css.map */
