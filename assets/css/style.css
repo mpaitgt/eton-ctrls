@@ -415,16 +415,6 @@ body footer div li {
   -ms-grid-rows: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;
   grid-gap: 10px;
-  max-width: 500px;
-}
-
-@media screen and (max-width: 768px) {
-  #contact-form {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    max-width: 1000px;
-    width: 100%;
-  }
 }
 
 #contact-form label {
@@ -444,6 +434,11 @@ body footer div li {
   width: 100%;
   color: #cfcfcf;
   font-size: 16px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  background: #616161;
+  border-bottom: 2px solid #29abe2;
 }
 
 #contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {

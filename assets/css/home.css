@@ -172,8 +172,8 @@
 .contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   margin-bottom: 50px;
   background: #474747;
   -webkit-box-align: center;
@@ -182,7 +182,7 @@
   justify-items: center;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .contact {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;

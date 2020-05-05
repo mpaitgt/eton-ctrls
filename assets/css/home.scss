@@ -105,12 +105,12 @@
 
 .contact {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 50%;
   margin-bottom: 50px;
   background: $gray-1;
   align-items: center;
   justify-items: center;
-  @include lg {
+  @include xl {
     grid-template-columns: 100%;
     grid-gap: 50px;
   }
