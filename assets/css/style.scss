@@ -358,10 +358,8 @@ body {
   }
 }
 
-.thank-you {
-  background: $white;
-  border-radius: 5px;
-  padding: 20px;
+h4.thank-you {
+  font-size: 24px;
 }
 
 @keyframes fade-in {

@@ -43,14 +43,14 @@ const submitForm = e => {
     emailjs.send('gmail', 'eton-controls', form, 'user_hj9lyTMwrU1mbY0EF1xh0')
     .then(res => {
       submitted = true;
-      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('contact-form').classList.add('sent');
       thankYouMessage();
     })
   }
 }
 
 const thankYouMessage = () => {
-  let thankYou = document.createElement('p');
+  let thankYou = document.createElement('h4');
   thankYou.innerHTML = 'Thank you so much for reaching out. We\'ll get back to you as soon as we can.';
   thankYou.classList.add('thank-you');
   if (submitted) {
