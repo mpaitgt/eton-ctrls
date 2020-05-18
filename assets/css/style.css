@@ -21,15 +21,6 @@ body .bg-img {
   opacity: 0;
 }
 
-body .fade-in {
-  -webkit-animation-name: 'fade-in';
-          animation-name: 'fade-in';
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-}
-
 body .bg-shape {
   -webkit-clip-path: polygon(100% 42%, 0% 100%, 100% 100%);
           clip-path: polygon(100% 42%, 0% 100%, 100% 100%);
@@ -237,13 +228,19 @@ body footer div li {
   right: 0;
   left: 0;
   top: 0;
-  padding: 5px 20px;
+  width: 100%;
   z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
   .main-nav {
     padding: 5px 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-nav {
+    background: transparent;
   }
 }
 
@@ -254,6 +251,7 @@ body footer div li {
 @media screen and (max-width: 576px) {
   .main-nav .menu-content {
     position: absolute;
+    background: #29abe2;
     top: 0;
     right: 0;
     width: 50%;
@@ -263,7 +261,6 @@ body footer div li {
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
-    background: #29abe2;
   }
 }
 
@@ -305,8 +302,9 @@ body footer div li {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 

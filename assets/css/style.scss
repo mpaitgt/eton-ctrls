@@ -20,11 +20,6 @@ body {
     z-index: -1;
     opacity: 0;
   }
-  .fade-in {
-    animation-name: 'fade-in';
-    animation-iteration-count: 1;
-    animation-duration: 5s;
-  }
   .bg-shape {
     clip-path: polygon(100% 42%, 0% 100%, 100% 100%);
     height: 100vh;
@@ -148,10 +143,13 @@ body {
   right: 0;
   left: 0;
   top: 0;
-  padding: 5px 20px;
+  width: 100%;
   z-index: 999;
   @include md {
     padding: 5px 5px;
+  }
+  @include sm {
+    background: transparent;
   }
   img {
     width: 200px;
@@ -159,12 +157,13 @@ body {
   .menu-content {
     @include sm {
       position: absolute;
+      background: $eton-blue;
       top: 0;
       right: 0;
       width: 50%;
       transform: translateX(150%);
       transition: transform 0.3s;
-      background: $eton-blue;
+      
     }
   }
   .nav-active {
@@ -175,7 +174,7 @@ body {
     @include flex(row, center, center);
     @include sm {
       height: 100vh;
-      @include flex(column, flex-start, space-around);
+      @include flex(column, flex-start, space-evenly);
     }
     li {
       padding: 12px 32px;
