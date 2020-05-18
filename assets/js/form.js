@@ -64,8 +64,11 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-  if(phone.match(/^\d{10}$/)) return true;
+  if(phone.match(/^(1-)?\d{3}-\d{3}-\d{4}$/)) return true;
   return false;
 }
 
 submitBtn.addEventListener('click', submitForm);
+
+// ^(1-)?\d{3}-\d{3}-\d{4}$
+// /^\d{10}$/ // no dashes
