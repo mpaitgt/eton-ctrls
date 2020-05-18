@@ -1,7 +1,7 @@
 function fadingNavbar() {
   let
     opacity = 0,
-    nav = document.querySelector('.main-nav'),
+    nav = document.querySelector('.menu-content'),
     bg = `rgb(41, 171, 226, ${opacity})`;
 
   opacity = (window.pageYOffset / 500);

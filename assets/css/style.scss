@@ -155,40 +155,52 @@ body {
   }
   img {
     width: 200px;
-    // @include tablet {
-    //   display: none;
-    // }
   }
   .menu-content {
-    // @include tablet {
-    //   transition: all 0.3s;
-    // }
+    @include sm {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      transform: translateX(150%);
+      transition: transform 0.3s;
+      background: $eton-blue;
+    }
   }
   .nav-active {
-    transform: translateY(0%);
+    transform: translateX(0%);
+    transition: transform 0.3s;
   }
   .menu-content > ul {
     @include flex(row, center, center);
+    @include sm {
+      height: 100vh;
+      @include flex(column, flex-start, space-around);
+    }
     li {
       padding: 12px 32px;
+      @include sm {
+
+      }
     }
   }
   .burger {
     display: none;
-    margin: 10px 0px;
+    margin: 20px;
     height: 50px;
     width: 50px;
     position: relative;
+    z-index: 999;
     cursor: pointer;
-    // @include tablet {
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   justify-content: center;
-    // }
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     div {
-      height: 5px;
-      width: 50px;
+      height: 3px;
+      width: 40px;
       margin: 5px 0px;
       background: $white;
       border-radius: 5px;
