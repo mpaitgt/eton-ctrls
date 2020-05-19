@@ -163,7 +163,6 @@ body {
       width: 50%;
       transform: translateX(150%);
       transition: transform 0.3s;
-      
     }
   }
   .nav-active {
@@ -178,8 +177,14 @@ body {
     }
     li {
       padding: 12px 32px;
+      transition: all 0.3s;
       @include sm {
-
+        font-size: 24px;
+        &:hover {
+          transform: scale(1.25);
+          transform-origin: left;
+          transition: transform 0.3s;
+        }
       }
     }
   }
@@ -371,6 +376,8 @@ body {
 
 h4.thank-you {
   font-size: 24px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 @keyframes fade-in {
