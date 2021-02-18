@@ -40,6 +40,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
   color: #f1f1f1;
+  text-align: center;
 }
 
 .two-columns {
@@ -47,7 +48,7 @@
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 4rem;
   background: #474747;
   color: #f1f1f1;
 }
@@ -71,16 +72,6 @@
     grid-gap: 40px;
     text-align: center;
   }
-}
-
-.two-columns .row .image-wrap {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .two-columns .row img {
@@ -131,6 +122,11 @@
 
 .two-columns .column p {
   max-width: 400px;
+}
+
+.two-columns .slidefromleft {
+  -webkit-animation: slidefromleft 4s ease-in-out 0.5s 1 forwards;
+          animation: slidefromleft 4s ease-in-out 0.5s 1 forwards;
 }
 
 .about {
@@ -191,8 +187,15 @@
 }
 
 .contact .column-one {
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .column-one {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .contact .column-one ul {
